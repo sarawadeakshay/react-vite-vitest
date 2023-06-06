@@ -1,70 +1,87 @@
-:root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0;
+  background-color: rgb(243, 238, 238);
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.header {
+  padding: 20px;
+  background-color: lightsteelblue;
+  color: rgb(28, 28, 94);
+  border-bottom: 1px solid lightgrey;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.expand-collapse {
+  position: absolute;
+  right: 20px;
+  top: 35px;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  border-radius: 10px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.expand-btn {
+  background-color: #198754;
+  border: 1px solid #198754;
+}
+
+.collapse-btn {
+  background-color: #212529;
+  border: 1px solid #212529;
+}
+
+.container {
+  display: flex;
+}
+
+.side-nav {
+  width: 320px;
+  transition: width 1s;
+  transition-timing-function: linear;
+  border-right: 1px solid lightgrey;
+  height: 100vh;
+  padding: 0 20px;
+  box-sizing: border-box;
+  background-color: lightgrey;
+  box-shadow: rgb(154 159 155 / 40%) 2px 0;
+}
+
+.collapse {
+  transition: width 1s;
+  transition-timing-function: linear;
+  width: 30px;
+  overflow: hidden;
+  background-color: lightgrey;
+}
+
+.nav-link-wrapper {
+  padding-top: 10px;
+  opacity: 1;
+  transition: opacity 1s;
+  transition-timing-function: linear;
+}
+
+.nav-link-wrapper-collapse {
+  opacity: 0;
+  transition: opacity 1s;
+  transition-timing-function: linear;
+}
+
+.nav-link {
+  margin: 10px 0;
+  /* color: rgb(28, 28, 94); */
+  /* color: lightslategray; */
+  font-weight: bold;
+  color:cadetblue;
+}
+
+.main-container {
+  padding: 20px;
+  color: lightslategray;
+  font-weight: bold;
 }
