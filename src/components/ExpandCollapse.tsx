@@ -1,14 +1,12 @@
-import useExpandCollapse from '../stores/expandCollapse';
+import useExpandCollapse from '../stores/expandCollapseStore';
 
 const ExpandCollapse = () => {
   const isExpandMode = useExpandCollapse((state: any) => state.isExpandMode);
   const setIsExpandMode = useExpandCollapse((state: any) => state.setIsExpandMode);
 
-  const onBtnClick = (type: string) => {
+  const onBtnClick = () => {
     setIsExpandMode();
   };
-
-  console.log('isExpandMode: ', isExpandMode);
 
   return (
     <div className='expand-collapse'>
@@ -16,7 +14,7 @@ const ExpandCollapse = () => {
         <button
           className='btn expand-btn'
           type='button'
-          onClick={() => onBtnClick('expand')}
+          onClick={onBtnClick}
         >
           Expand
         </button>
@@ -25,7 +23,7 @@ const ExpandCollapse = () => {
         <button
           className='btn collapse-btn'
           type='button'
-          onClick={() => onBtnClick('collapse')}
+          onClick={onBtnClick}
         >
           Collapse
         </button>

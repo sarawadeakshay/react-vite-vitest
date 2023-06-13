@@ -1,4 +1,4 @@
-import useExpandCollapse from '../stores/expandCollapse';
+import useExpandCollapse from '../stores/expandCollapseStore';
 
 const SideNav = () => {
   const isExpandMode = useExpandCollapse((state: any) => state.isExpandMode);
